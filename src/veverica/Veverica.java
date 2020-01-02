@@ -4,7 +4,8 @@ public class Veverica {
 
     private String ime;
     private String boja;
-    private Ruka levaRuka, desnaRuka;
+    private final Ruka levaRuka;
+    private final Ruka desnaRuka;
     private String staDrzi;
 
     public void setIme(String ime) {
@@ -18,6 +19,7 @@ public class Veverica {
     public Veverica(String ime, String boja) {
         this.setIme(ime);
         this.setBoja(boja);
+        //uzimamo metode definassane unutar classe Ruka
         this.levaRuka = new Ruka();
         this.desnaRuka = new Ruka();
         this.staDrzi = "NISTA";
