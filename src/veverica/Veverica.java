@@ -1,11 +1,8 @@
-
 package veverica;
 
 public class Veverica {
 
-    
-    public static void main(String[] args) {
-       
-    }
-    
+    private String ime;
+    private String boja;
+
 }
