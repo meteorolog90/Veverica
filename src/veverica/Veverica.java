@@ -59,7 +59,7 @@ public class Veverica {
         System.out.println(ime + ": je ispruzila levu ruku.");
 
         if (desnaRuka.jeIspruzena()) {
-            System.out.println(ime + ":je ispustila " + staDrzi);
+            System.out.println(ime + ": je ispustila " + staDrzi);
             staDrzi = "NISTA";
 
         }
