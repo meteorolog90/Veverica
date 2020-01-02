@@ -7,7 +7,6 @@ public class Veverica {
     private Ruka levaRuka, desnaRuka;
     private String staDrzi;
 
-    
     public void setIme(String ime) {
         this.ime = ime;
     }
@@ -26,6 +25,7 @@ public class Veverica {
 
     public String getIme() {
         return ime;
+
     }
 
     public String getBoja() {
@@ -35,47 +35,46 @@ public class Veverica {
     public String getStaDrzi() {
         return staDrzi;
     }
-    
+
     //definisemo dva nova metoda za setovanje stanja desne i leve ruke  
-    
     public void savijDesnuRuku() {
         desnaRuka.savij();
         System.out.println(ime + ": je savila desnu ruku.");
     }
-    
+
     public void savijLevuRuku() {
         levaRuka.savij();
         System.out.println(ime + ": je savila levu ruku.");
-        
-        if (levaRuka.jeIspruzena()){
+
+        if (levaRuka.jeIspruzena()) {
             System.out.println(ime + ":je ispustila " + staDrzi);
             staDrzi = "NISTA";
         }
     }
-    
+
     public void ispruziLevuRuku() {
         levaRuka.ispruzi();
         System.out.println(ime + ": je ispruzila levu ruku.");
-        
-        if (desnaRuka.jeIspruzena()){
+
+        if (desnaRuka.jeIspruzena()) {
             System.out.println(ime + ":je ispustila " + staDrzi);
             staDrzi = "NISTA";
-             
+
         }
     }
-    
+
     public void ispruziDesnuRuku() {
         desnaRuka.ispruzi();
         System.out.println(ime + ": je ispruzila desnu ruku.");
     }
-    
-    public void pridrzi (String sta) {
+
+    public void pridrzi(String sta) {
         if (levaRuka.jeSavijena() || desnaRuka.jeSavijena()) {
             staDrzi = sta;
             System.out.println(ime + ": pridrzava " + sta);
         } else {
-            System.out.println(ime + ":ne moze da pridrzi"+sta);
+            System.out.println(ime + ":ne moze da pridrzi" + sta);
         }
-        
+
     }
 }
